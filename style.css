@@ -1,29 +1,25 @@
-/* =========================
-   GLOBAL STYLES
-========================= */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===== BODY ===== */
 body {
   font-family: "Segoe UI", Tahoma, sans-serif;
   background: #f8f9fb;
   color: #333;
-  line-height: 1.6;
 }
 
-/* =========================
-   SITE HEADER (LOGO + TITLE)
-========================= */
+/* ===== HEADER ===== */
 .site-header {
   display: flex;
   align-items: center;
   justify-content: center;
   background: linear-gradient(135deg, #2c3e50, #4b6cb7);
   color: white;
-  padding: 20px;
+  padding: 18px 20px;
   position: relative;
 }
 
@@ -33,71 +29,54 @@ body {
 }
 
 .logo img {
-  height: 60px;
-  width: auto;
+  height: 55px;
 }
 
+/* Center text */
 .header-text {
   text-align: center;
 }
 
 .header-text h1 {
-  font-size: 36px;
-  letter-spacing: 1px;
+  font-size: 32px;
 }
 
 .header-text p {
-  font-size: 16px;
+  font-size: 14px;
   opacity: 0.9;
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* ===== NAV ===== */
 nav {
   background: white;
   display: flex;
   justify-content: center;
-  gap: 25px;
-  padding: 15px 0;
+  gap: 22px;
+  padding: 12px 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  flex-wrap: wrap;
 }
 
 nav a {
   color: #2c3e50;
   text-decoration: none;
   font-weight: 600;
-  position: relative;
+  font-size: 15px;
 }
 
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0;
-  height: 2px;
-  background: #4b6cb7;
-  transition: 0.3s;
-}
-
-nav a:hover::after {
-  width: 100%;
-}
-
-/* =========================
-   HERO BANNER
-========================= */
+/* ===== HERO ===== */
 .hero-banner {
   background: url("images/church.jpg") center/cover no-repeat;
-  height: 480px;
+  height: 70vh;
+  min-height: 420px;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 .hero-banner::before {
@@ -112,93 +91,56 @@ nav a:hover::after {
 }
 
 .hero-title h2 {
-  font-size: 48px;
-  margin-bottom: 12px;
+  font-size: 46px;
 }
 
 .hero-subtitle p {
-  font-size: 20px;
-  opacity: 0.9;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
-/* =========================
-   CONTENT SECTIONS
-========================= */
+/* ===== CONTENT ===== */
 section {
   max-width: 1100px;
-  margin: 60px auto;
-  padding: 40px;
+  margin: 50px auto;
+  padding: 30px;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
-section h2 {
-  color: #4b6cb7;
-  margin-bottom: 15px;
-}
-
-section p,
-section li {
-  font-size: 16px;
-}
-
-/* =========================
-   LIST STYLE
-========================= */
-ul {
-  list-style: none;
-}
-
-ul li {
-  padding-left: 25px;
-  position: relative;
-  margin-bottom: 12px;
-}
-
-ul li::before {
-  content: "✝";
-  position: absolute;
-  left: 0;
-  color: #4b6cb7;
-}
-
-/* =========================
-   FOOTER
-========================= */
+/* ===== FOOTER ===== */
 footer {
   background: #2c3e50;
   color: white;
   text-align: center;
-  padding: 25px;
-  margin-top: 60px;
+  padding: 20px;
 }
 
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
+/* ===== MOBILE VIEW ===== */
 @media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
 
-  .hero-title h2 {
-    font-size: 32px;
-  }
-
-  section {
-    margin: 30px 15px;
-    padding: 25px;
-  }
-}
-
-@media (max-width: 600px) {
   .logo img {
     height: 45px;
   }
 
-  .site-header {
-    padding-top: 70px;
+  .header-text h1 {
+    font-size: 24px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  .hero-title h2 {
+    font-size: 30px;
+  }
+
+  .hero-subtitle p {
+    font-size: 16px;
+  }
+
+  section {
+    margin: 20px;
+    padding: 20px;
   }
 }
